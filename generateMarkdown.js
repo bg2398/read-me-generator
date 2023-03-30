@@ -11,6 +11,7 @@ function renderLicenseBadge(license) {
 }
 
 // Returns the license link
+// this is the licenses generated in the terminal
 function renderLicenseLink(license) {
   if (license === 'MIT') {
     return `https://lbesson.mit-license.org/`
