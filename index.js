@@ -161,3 +161,20 @@ const writeToFile = data => {
         })
     })
 }
+
+// TODO: Create a function to initialize app
+const init = () => {
+    return inquirer.prompt(questions);
+}
+
+// Function call to initialize app
+init()
+.then(userInput => {
+    return generateMarkdown(userInput);
+})
+.then(readmeInfo => {
+    return writeToFile(readmeInfo);
+})
+.catch(err => {
+    console.log(err);
+})
